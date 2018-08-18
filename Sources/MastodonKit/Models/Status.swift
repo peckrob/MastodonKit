@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Status: Codable {
+public struct Status: Codable {
     /// The ID of the status.
     public let id: String
     /// A Fediverse-unique resource ID.
@@ -52,7 +52,7 @@ public class Status: Codable {
     /// The detected language for the status.
     public let language: String?
     /// The reblogged Status
-    public let reblog: Status?
+    public let reblog: [Status]?
     /// Whether this is the pinned status for the account that posted it.
     public let pinned: Bool?
 
